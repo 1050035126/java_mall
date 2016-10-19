@@ -179,7 +179,7 @@
 				</p>
 				<p>
 					<input name="image" type="file" />
-				</p>
+				</p>  
 				<p>
 					<!-- 下面的button的submit用class是因为js -->
 					<button class="submit">发表</button>
