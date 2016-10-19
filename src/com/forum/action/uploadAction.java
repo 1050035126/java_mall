@@ -24,7 +24,7 @@ public class uploadAction {
     System.out.println(uploadContentType);
     
 
-    BufferedOutputStream bos= new BufferedOutputStream(out)
+    //BufferedOutputStream bos= new BufferedOutputStream(out)
 
     System.out.println("路径" + ServletActionContext.getServletContext().getRealPath("/"));
     String savaPath = ServletActionContext.getServletContext()
