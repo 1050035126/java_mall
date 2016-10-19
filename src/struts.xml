@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC 
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+	<!-- 配置全局拦截器 -->
+	<package name="all" extends="struts-default" namespace="/">
+		<action name="deleteMessageAction" class="com.forum.action.ManagerAction"
+			method="DeleteMessage">
+			<result name="success">manager_message.jsp</result>
+		</action>
+	
+		
+		<action name="GetUserAction" class="com.forum.action.ManagerAction"
+			method="GetUser">
+			<result name="success">manager_person.jsp</result>
+		</action>
+		<action name="changeAuthorityAction" class="com.forum.action.ManagerAction"
+			method="ChangeAuthority">
+			<result name="success">manager_person.jsp</result>
+		</action>
+		<action name="deleteUserAction" class="com.forum.action.ManagerAction"
+			method="DeleteUser">
+			<result name="success">manager_person.jsp</result>
+		</action>
+	
+
+
+
+
+		<action name="UploadAction" class="com.forum.action.uploadAction"
+			method="Upload">
+			<result name="success">message.jsp</result>
+		</action>
+
+
+
+		<action name="WriteAction" class="com.forum.action.MessageAction"
+			method="Write">
+			<result name="success">message.jsp</result>
+		</action>
+		<action name="GetAction" class="com.forum.action.MessageAction"
+			method="GetMessageList">
+			<result name="success">message.jsp</result>
+			<result name="manager_message">manager_message.jsp</result>
+		</action>
+
+		<action name="LoginAction" class="com.forum.action.UserAction"
+			method="Login">
+			<result name="false">message.jsp</result>
+			<result name="user">message.jsp</result>
+			<result name="admin">manager.jsp</result>
+		</action>
+		<action name="EnrollAction" class="com.forum.action.UserAction"
+			method="Enroll">
+			<result name="false">message.jsp</result>
+			<result name="true">message.jsp</result>
+		</action>
+		<action name="CancelAction" class="com.forum.action.UserAction"
+			method="Cancel">
+			<result name="cancel">message.jsp</result>
+		</action>
+
+		<action name="Page_messageAction" class="com.forum.action.Page_messageAction"
+			method="Page">
+			<result name="success">message.jsp</result>
+			<result name="manager_message">manager_message.jsp</result>
+		</action>
+
+
+
+
+
+	</package>
+
+
+
+
+</struts>
