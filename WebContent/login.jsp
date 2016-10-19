@@ -47,17 +47,17 @@ a{font-size:14px;color:gray}
 			  */
 			%>
 			<div>
-				<form id="loginform" action="LoginAction" method="post" class="input-group">
+				<form id="loginform" onsubmit="return validate()" action="LoginAction" method="post" class="input-group">
 
 
 					<p style="padding-top: 10px;">
-						<input
+						<input id="inputUsername"
 							style="-webkit-border-radius: 10px; border-radius: 5px; width: 250px; height: 40px;"
 							name="username" type="text" class="form-control "
 							placeholder="用户名" />
 					</p>
 					<p style="padding-top: 40px;">
-						<input
+						<input id="inputPassword"
 							style="-webkit-border-radius: 10px; border-radius: 5px; width: 250px; height: 40px;"
 							class="form-control " type="password" name="password"
 							placeholder="密码" />
@@ -73,7 +73,7 @@ a{font-size:14px;color:gray}
 			</div>
 			</p>
 			<p style="padding-top: 10px;">
-				<button type="button" onclick="validate();" name="login"
+				<button type="submit"  name="login"
 					class="btn btn-success" style="width: 250px; height: 40px;">登录</button>
 
 			</p>

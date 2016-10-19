@@ -11,7 +11,7 @@
 <script type="text/javascript" src="js/jquery-2.1.0.min.js"></script>
 <script type="text/javascript" src="js/message/write.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here </title>
+<title>Insert title here</title>
 
 </head>
 <body>
@@ -65,15 +65,15 @@
 							<div>${list.id}</div>
 						</div>
 						<div style="float: left;">
-							
+
 
 
 							<div>
 								<a href="#">${list.title} </a> <br> ${list.content}<br>
 								<c:if test="${list.image!=null}">
-								<img alt="" src="image/content/${list.id}.jpg"
-									style="height: 50px; width: 50px;">
-							</c:if>
+									<img alt="" src="image/content/${list.id}.jpg"
+										style="height: 50px; width: 50px;">
+								</c:if>
 							</div>
 						</div>
 						<div style="float: left;">
@@ -178,9 +178,10 @@
 					<input name="nickname" value="${nickname}" type="hidden" />
 				</p>
 				<p>
-					<input  name="image" type="file" />
+					<input name="image" type="file" />
 				</p>
 				<p>
+					<!-- 下面的button的submit用class是因为js -->
 					<button class="submit">发表</button>
 					<a href="http://www.baidu.com" target="_blank">百度一下(新建窗口)</a>
 				</p>

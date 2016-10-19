@@ -20,17 +20,26 @@ checkCode.value = code;
 function validate () {      
 var inputCode = document.getElementById("input1").value.toUpperCase();      
 var codeToUp=code.toUpperCase();  
+var inputUsername = document.getElementById("inputUsername").value;
+var inputPassword = document.getElementById("inputPassword").value;  
+ if (inputUsername==""||inputPassword=="") {
+	alert("请输入用户名或密码！");
+	return false; 
+}
+
 if(inputCode.length <=0) {      
   alert("请输入验证码！");      
   return false;      
-}      
+}   
+
 else if(inputCode != codeToUp ){      
    alert("验证码输入错误！");      
    createCode();      
    return false;      
-}      
+}
+
 else {      
-	document.getElementById('loginform').submit();    
+	//document.getElementById('loginform').submit();    
   return true;      
 }      
       
